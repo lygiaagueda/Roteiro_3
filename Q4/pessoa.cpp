@@ -38,3 +38,6 @@ int Pessoa::getIdade(){
 string Pessoa::getTelefone(){
     return this->telefone;
 }
+
+Pessoa::~Pessoa(){
+}

@@ -21,6 +21,8 @@ class Pessoa{
         string getNome();
         int getIdade();
         string getTelefone();
+
+	virtual ~Pessoa();
 };
 
 #endif

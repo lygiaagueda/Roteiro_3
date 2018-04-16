@@ -16,6 +16,9 @@ int main(){
 
     cout << tu->getNome() << ", " << tu->getIdade();
     cout << " anos, telefone: " << tu->getTelefone() << endl;
+	
+	eu->~Pessoa();
+	tu->~Pessoa(); 
 
-    return 0;
+    return 0;	
 }
