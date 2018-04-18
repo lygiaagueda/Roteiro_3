@@ -8,8 +8,7 @@ using namespace std;
 
 ControleDeGastos::~ControleDeGastos(){}
 
-ControleDeGastos::ControleDeGastos(){
-}
+ControleDeGastos::ControleDeGastos(){}
 
 void ControleDeGastos::setDespesa(vector <Despesa> despesas){
     this->despesas = despesas;
@@ -19,14 +18,8 @@ double ControleDeGastos::calculaTotalDeDespesas(){
     int i = 0;
     double valortotal = 0;
 
-    while(1){
-        if(this->despesas[i].getValor() > 0){
-            // cout << i <<" "<< this->despesas[i].getValor() << endl;
-            valortotal += this->despesas[i].getValor();
-            i++;
-        }else{
-            break;
-        }
+    for(i = 0; i <= this->despesas.size(); i++){
+        valortotal += this->despesas[i].getValor();
     }
     return valortotal;
 }
@@ -38,10 +31,11 @@ bool ControleDeGastos::existeDespesaDoTipo(string tipo){
         if(tipo.compare(this->despesas[i].getTipoDeGasto()) == 0){
             existe = true;
             break;
-        }else{
-            // cout << i << " " + this->despesas[i].getTipoDeGasto() << endl;
-             i++;
-        }    
+        }else if(i == despesas.size()){
+            break;
+        }
+        
+        i++;    
     }
     return existe;
 }

@@ -25,8 +25,10 @@ int main(){
 
     contabilidade->setDespesa(gastos);
 
-    if(contabilidade->existeDespesaDoTipo("aluguel")){
-        cout << "existe gasto com aluguel" << endl;
+    if(contabilidade->existeDespesaDoTipo("aula")){
+        cout << "existe gasto com aula" << endl;
+    }else{
+        cout << "nao existe gasto com aula" << endl;
     }
     if(contabilidade->existeDespesaDoTipo("comida")){
         cout << "existe gasto com comida" << endl;
